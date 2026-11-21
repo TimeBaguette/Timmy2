@@ -1,0 +1,102 @@
+:root{
+    --main-color: #ff9800;
+    --main-dark: #e68900;
+    --text-color: #333;
+    --border-color: #e0e0e0;
+}
+*{
+    box-sizing: border-box;  
+}
+body{
+    background: linear-gradient(135deg, #ffe0b2, #fff8e1);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+h1{
+    font-weight: 500;
+    margin: 10px 0 20px;
+    text-align: center;
+}
+.money-img{
+    width: 160px;
+    max-width: 100%;
+}
+.container{
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    padding: 20px 30px;
+    width: 100%;
+    max-width: 480px;
+}
+.currency{
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.currency select:hover{
+    border-color: var(--main-color);
+}
+.currency input{
+    border: 0;
+    border-bottom: 2px solid var(--border-color);
+    background: transparent;
+    font-size: 28px;
+    text-align: right;
+    width: 100%;
+    max-width: 200px;
+    transition: border-color 0.2s;
+}
+.swap-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 0;
+    border-top: 1px dashed var(--border-color);
+    border-bottom: 1px dashed var(--border-color);
+}
+.btn{
+    background-color: var(--main-color);
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 8px 16px;
+    transition: background-color 0.2s, transform 0.1s;
+}
+.btn:hover{
+    background-color: var(--main-dark);
+}
+
+.btn:active{
+    transform: scale(0.95);
+}
+
+.rate{
+    font-size: 18px;
+    padding: 0 10px;
+    color: var(--main-dark);
+    text-align: right;
+}
+
+/* ===== เมื่อคลิกเลือกช่องต่างๆ ===== */
+select:focus,
+input:focus,
+button:focus{
+    outline: 0;
+}
+
+.currency select:focus,
+.currency input:focus{
+    border-color: var(--main-color);
+}
